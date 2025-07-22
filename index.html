@@ -1,247 +1,265 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vamos conversar? | RespondeJá</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>Nana Velas Aromáticas | Aromas naturais para seu bem-estar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#F5F1EA',
+                        beige: '#E6DFD3',
+                        sand: '#D4C8B0',
+                        terracotta: '#BC8A6A',
+                        brown: '#8D6E63',
+                        gold: '#D4AF37',
+                    },
+                    fontFamily: {
+                        serif: ['Cormorant Garamond', 'serif'],
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
     <style>
-        :root {
-            --purple-primary: #6B46C1;
-            --green-neon: #4ADE80;
-            --dark-gray: #2D3748;
-            --white: #FFFFFF;
-        }
-        
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #F9FAFB;
-            color: var(--dark-gray);
+            background-color: #F5F1EA;
         }
-        
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Montserrat', sans-serif;
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='500' viewBox='0 0 800 500'%3E%3Crect width='800' height='500' fill='%23BC8A6A'/%3E%3Cpath d='M400 150 C 350 200, 350 300, 400 350 C 450 300, 450 200, 400 150 Z' fill='%23F5F1EA'/%3E%3Ccircle cx='400' cy='200' r='20' fill='%23D4AF37'/%3E%3Cpath d='M390 200 L 390 170 L 410 170 L 410 200 Z' fill='%23D4AF37'/%3E%3Cpath d='M395 170 L 395 160 L 405 160 L 405 170 Z' fill='%23D4AF37'/%3E%3Cpath d='M397 160 L 397 155 L 403 155 L 403 160 Z' fill='%23D4AF37'/%3E%3Cpath d='M399 155 L 399 150 L 401 150 L 401 155 Z' fill='%23D4AF37'/%3E%3Cpath d='M400 150 L 400 145 L 400 145 L 400 150 Z' fill='%23D4AF37'/%3E%3Cpath d='M395 200 L 395 210 C 395 215, 405 215, 405 210 L 405 200 Z' fill='%23F5F1EA'/%3E%3Cpath d='M380 250 C 350 270, 350 330, 380 350 C 410 330, 410 270, 380 250 Z' fill='%23E6DFD3'/%3E%3Ccircle cx='380' cy='280' r='15' fill='%23D4AF37'/%3E%3Cpath d='M375 280 L 375 260 L 385 260 L 385 280 Z' fill='%23D4AF37'/%3E%3Cpath d='M378 260 L 378 255 L 382 255 L 382 260 Z' fill='%23D4AF37'/%3E%3Cpath d='M379 255 L 379 250 L 381 250 L 381 255 Z' fill='%23D4AF37'/%3E%3Cpath d='M376 280 L 376 285 C 376 290, 384 290, 384 285 L 384 280 Z' fill='%23E6DFD3'/%3E%3Cpath d='M420 280 C 400 300, 400 340, 420 360 C 440 340, 440 300, 420 280 Z' fill='%23D4C8B0'/%3E%3Ccircle cx='420' cy='310' r='15' fill='%23D4AF37'/%3E%3Cpath d='M415 310 L 415 290 L 425 290 L 425 310 Z' fill='%23D4AF37'/%3E%3Cpath d='M418 290 L 418 285 L 422 285 L 422 290 Z' fill='%23D4AF37'/%3E%3Cpath d='M419 285 L 419 280 L 421 280 L 421 285 Z' fill='%23D4AF37'/%3E%3Cpath d='M416 310 L 416 315 C 416 320, 424 320, 424 315 L 424 310 Z' fill='%23D4C8B0'/%3E%3C/svg%3E");
+            background-size: cover;
+            background-position: center;
         }
-        
-        .btn {
-            transition: all 0.3s ease;
-            transform: translateY(0);
+        .gold-accent {
+            background: linear-gradient(90deg, rgba(212,175,55,0) 0%, rgba(212,175,55,0.5) 50%, rgba(212,175,55,0) 100%);
+            height: 1px;
         }
-        
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        .form-container {
+            background-color: rgba(245, 241, 234, 0.9);
+            box-shadow: 0 10px 25px rgba(141, 110, 99, 0.1);
         }
-        
-        .card {
-            transition: all 0.5s ease;
+        input:focus, select:focus {
+            outline: none;
+            border-color: #D4AF37;
         }
-        
-        .card:hover {
+        .product-card {
+            transition: transform 0.3s ease;
+        }
+        .product-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-        
-        .avatar {
-            position: relative;
-            overflow: hidden;
-            border-radius: 12px;
-        }
-        
-        .avatar::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 30%;
-            background: linear-gradient(to top, rgba(107, 70, 193, 0.6), transparent);
-        }
-        
-        .tech-pattern {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0.05;
-            pointer-events: none;
-            z-index: 0;
         }
     </style>
 </head>
-<body>
-    <!-- Tech pattern background -->
-    <div class="tech-pattern">
-        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-            <pattern id="tech-pattern" width="50" height="50" patternUnits="userSpaceOnUse">
-                <path d="M0 0h50v50H0z" fill="none"/>
-                <circle cx="25" cy="25" r="1" fill="#6B46C1" />
-                <path d="M10 10h5v5h-5z" fill="#6B46C1" opacity="0.5" />
-                <path d="M35 35h5v5h-5z" fill="#4ADE80" opacity="0.5" />
-                <path d="M10 35l5 5h-5z" fill="#6B46C1" opacity="0.3" />
-                <path d="M35 10l5 5h-5z" fill="#4ADE80" opacity="0.3" />
-            </pattern>
-            <rect width="100%" height="100%" fill="url(#tech-pattern)" />
-        </svg>
-    </div>
-
-    <!-- Header with logo -->
-    <header class="w-full py-6 px-4 sm:px-6 lg:px-8 bg-white shadow-sm relative z-10">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="flex items-center">
-                <svg class="h-10 w-10 text-purple-700" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="40" height="40" rx="8" fill="#6B46C1"/>
-                    <path d="M12 20C12 15.5817 15.5817 12 20 12C24.4183 12 28 15.5817 28 20V26C28 27.1046 27.1046 28 26 28H14C12.8954 28 12 27.1046 12 26V20Z" fill="#4ADE80"/>
-                    <path d="M18 22C18 20.8954 18.8954 20 20 20C21.1046 20 22 20.8954 22 22V28H18V22Z" fill="white"/>
-                </svg>
-                <span class="ml-3 text-xl font-bold text-purple-700 font-['Montserrat']">RespondeJá</span>
-            </div>
+<body class="font-sans text-brown">
+    <!-- Header -->
+    <header class="py-6 px-4 md:px-8 bg-cream">
+        <div class="container mx-auto flex flex-col items-center">
+            <h1 class="font-serif text-4xl md:text-5xl text-terracotta font-light tracking-wide">Nana Velas Aromáticas</h1>
+            <div class="gold-accent w-40 my-3"></div>
+            <p class="font-serif text-lg md:text-xl text-brown italic">Transforme sua casa em um refúgio com aromas naturais.</p>
         </div>
     </header>
 
-    <!-- Main content -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <!-- Left column: Text content -->
-            <div class="space-y-8">
-                <div>
-                    <h1 class="text-4xl md:text-5xl font-bold text-purple-700 mb-4 font-['Montserrat']">Vamos conversar?</h1>
-                    <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
-                        Fale diretamente com <span class="font-medium">Rafaela Victor</span>. Já estive no seu lugar: lidando com mil tarefas e pouco tempo. Hoje, ajudo empreendedores como você a automatizar com inteligência e crescer com estrutura.
-                    </p>
-                </div>
+    <!-- Hero Section -->
+    <section class="hero-section h-96 md:h-[500px] flex items-center justify-center">
+        <div class="text-center text-white px-4">
+            <h2 class="font-serif text-4xl md:text-5xl mb-4 drop-shadow-lg">Aromas que transformam momentos</h2>
+            <p class="font-sans text-lg md:text-xl max-w-xl mx-auto drop-shadow-md">Descubra o poder dos aromas naturais para criar ambientes acolhedores e memoráveis</p>
+            <a href="#form" class="mt-8 inline-block bg-terracotta hover:bg-brown text-cream font-serif py-3 px-8 rounded-sm transition duration-300 shadow-lg">Descubra sua vela ideal</a>
+        </div>
+    </section>
 
-                <!-- Contact buttons -->
-                <div class="space-y-4 pt-4">
-                    <a href="https://wa.me/5548988624462?text=Ol%C3%A1%21%20Vi%20sua%20p%C3%A1gina%20e%20quero%20saber%20como%20a%20automa%C3%A7%C3%A3o%20pode%20ajudar%20meu%20neg%C3%B3cio.
-                        " target="_blank" class="btn flex items-center justify-center w-full sm:w-auto px-8 py-4 bg-green-400 hover:bg-green-500 text-white font-medium rounded-lg text-lg">
-                        <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                        </svg>
-                        📲 Falar comigo no WhatsApp
-                    </a>
-                    
-                    <a href="https://rafaelaai.github.io/respondeja-site/" target="_blank" class="btn flex items-center justify-center w-full sm:w-auto px-8 py-4 bg-purple-700 hover:bg-purple-800 text-white font-medium rounded-lg text-lg">
-                        <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm1 16.057v-3.05c2.837.183 4.704 1.179 5.904 2.895-1.297-2.775-3.918-4.678-6.904-4.678-4.418 0-8 3.582-8 8v.565c0 .412.167.805.464 1.093.298.288.693.45 1.106.45.413 0 .808-.162 1.106-.45.297-.288.464-.681.464-1.093v-.565c0-2.757 2.243-5 5-5v3.057L18 12l-5 4.057z"/>
-                        </svg>
-                        🌐 Visite o nosso site
-                    </a>
+    <!-- About Section -->
+    <section class="py-16 px-4 md:px-8 bg-cream">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="font-serif text-3xl md:text-4xl text-center text-terracotta mb-3">Nossa Essência</h2>
+            <div class="gold-accent w-24 mx-auto mb-8"></div>
+            
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="md:w-1/2">
+                    <svg class="w-full h-auto" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="200" cy="200" r="180" fill="#E6DFD3" />
+                        <path d="M200 100 C 150 150, 150 250, 200 300 C 250 250, 250 150, 200 100 Z" fill="#BC8A6A" />
+                        <circle cx="200" cy="150" r="30" fill="#D4AF37" />
+                        <path d="M185 150 L 185 100 L 215 100 L 215 150 Z" fill="#D4AF37" />
+                        <path d="M190 100 L 190 80 L 210 80 L 210 100 Z" fill="#D4AF37" />
+                        <path d="M195 80 L 195 70 L 205 70 L 205 80 Z" fill="#D4AF37" />
+                        <path d="M190 150 L 190 170 C 190 180, 210 180, 210 170 L 210 150 Z" fill="#E6DFD3" />
+                        <path d="M200 300 C 180 320, 180 340, 200 360 C 220 340, 220 320, 200 300 Z" fill="#D4C8B0" />
+                        <path d="M200 300 L 200 280 M 200 360 L 200 380" stroke="#8D6E63" stroke-width="2" />
+                        <path d="M160 260 C 140 280, 140 300, 160 320 C 180 300, 180 280, 160 260 Z" fill="#D4C8B0" />
+                        <path d="M160 260 L 160 240 M 160 320 L 160 340" stroke="#8D6E63" stroke-width="2" />
+                        <path d="M240 260 C 220 280, 220 300, 240 320 C 260 300, 260 280, 240 260 Z" fill="#D4C8B0" />
+                        <path d="M240 260 L 240 240 M 240 320 L 240 340" stroke="#8D6E63" stroke-width="2" />
+                    </svg>
                 </div>
-
-                <!-- Additional info -->
-                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100 card">
-                    <h3 class="text-xl font-semibold text-purple-700 mb-3 font-['Montserrat']">Por que automatizar seu atendimento?</h3>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-400 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                            </svg>
-                            <span>Atendimento 24/7 sem interrupções</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-400 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                            </svg>
-                            <span>Aumento na taxa de conversão de vendas</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-400 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                            </svg>
-                            <span>Mais tempo para focar em crescer</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Right column: Image and card -->
-            <div class="space-y-8">
-                <!-- Avatar image -->
-                    <img src="FOTOPERFIL.jpg" width="300" height="200" img>
-                     <h3 class="text-xl font-bold font-['Montserrat']">Rafaela Victor</h3>
-                        <p class="text-sm">Gestora de Automação</p>
+                <div class="md:w-1/2 space-y-6">
+                    <div>
+                        <h3 class="font-serif text-2xl text-brown mb-2">Feito à mão com amor</h3>
+                        <p class="text-brown/80">Cada vela é cuidadosamente produzida de forma artesanal, garantindo atenção aos detalhes e qualidade incomparável.</p>
                     </div>
-                </div>
-
-                <!-- Testimonial card -->
-                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100 card">
-                    <div class="flex items-center mb-4">
-                        <div class="flex text-yellow-400">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                            </svg>
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                            </svg>
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                            </svg>
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                            </svg>
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                            </svg>
-                        </div>
+                    <div>
+                        <h3 class="font-serif text-2xl text-brown mb-2">Ingredientes naturais</h3>
+                        <p class="text-brown/80">Utilizamos cera de soja, óleos essenciais puros e pavios de algodão para criar produtos sustentáveis e livres de toxinas.</p>
                     </div>
-                    <blockquote class="text-gray-700 italic mb-4">
-                        "Não entrego só automação. Entrego estratégia, visão de negócio e o braço que faltava pra sua empresa escalar com mais leveza."
-                    </blockquote>
-                    <div class="flex items-center">
-                        <div class="w-10 h-10 rounded-full bg-purple-200 flex items-center justify-center text-purple-700 font-bold">
-                            RV
-                        </div>
-                        <div class="ml-3">
-                            <p class="text-sm font-medium text-gray-900">Rafaela Victor</p>
-                            <p class="text-xs text-gray-500">CEO, RespondeJá Automação</p>
-                        </div>
+                    <div>
+                        <h3 class="font-serif text-2xl text-brown mb-2">Bem-estar em cada aroma</h3>
+                        <p class="text-brown/80">Nossos aromas são cuidadosamente selecionados para promover relaxamento, energia ou equilíbrio, transformando sua casa em um santuário.</p>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
+    </section>
+
+    <!-- Form Section -->
+    <section id="form" class="py-16 px-4 md:px-8 bg-beige">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="font-serif text-3xl md:text-4xl text-center text-terracotta mb-3">Descubra sua vela ideal</h2>
+            <div class="gold-accent w-32 mx-auto mb-8"></div>
+            <p class="text-center text-brown/80 max-w-2xl mx-auto mb-10">Preencha o formulário abaixo para descobrirmos qual linha de velas combina melhor com você e como podemos atendê-lo da melhor forma.</p>
+            
+            <div class="form-container p-8 md:p-10 rounded-lg">
+                <form id="contact-form" class="space-y-6">
+                    <div>
+                        <label for="name" class="block font-serif text-lg text-brown mb-2">Nome completo</label>
+                        <input type="text" id="name" name="name" class="w-full p-3 border border-sand bg-cream/50 rounded-sm" required>
+                    </div>
+                    
+                    <div>
+                        <label for="contact" class="block font-serif text-lg text-brown mb-2">Instagram ou WhatsApp</label>
+                        <input type="text" id="contact" name="contact" class="w-full p-3 border border-sand bg-cream/50 rounded-sm" required>
+                    </div>
+                    
+                    <div>
+                        <label for="preference" class="block font-serif text-lg text-brown mb-2">Como prefere ser atendido?</label>
+                        <select id="preference" name="preference" class="w-full p-3 border border-sand bg-cream/50 rounded-sm" required>
+                            <option value="" disabled selected>Selecione uma opção</option>
+                            <option value="mensagem">Mensagem direta</option>
+                            <option value="catalogo">Catálogo PDF</option>
+                            <option value="chamada">Agendar chamada</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="line" class="block font-serif text-lg text-brown mb-2">Qual linha de velas mais combina com você?</label>
+                        <select id="line" name="line" class="w-full p-3 border border-sand bg-cream/50 rounded-sm" required>
+                            <option value="" disabled selected>Selecione uma opção</option>
+                            <option value="calmante">Calmante</option>
+                            <option value="energizante">Energizante</option>
+                            <option value="romantica">Romântica</option>
+                            <option value="limpeza">Limpeza espiritual</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-terracotta hover:bg-brown text-cream font-serif text-lg py-3 px-6 rounded-sm transition duration-300">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Highlights -->
+    <section class="py-16 px-4 md:px-8 bg-cream">
+        <div class="container mx-auto max-w-5xl">
+            <h2 class="font-serif text-3xl md:text-4xl text-center text-terracotta mb-3">Por que escolher nossas velas</h2>
+            <div class="gold-accent w-32 mx-auto mb-12"></div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="product-card bg-beige/50 p-8 rounded-lg text-center">
+                    <div class="w-20 h-20 mx-auto mb-6 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" class="w-16 h-16 text-gold">
+                            <path fill="#D4AF37" d="M32 8c-1.1 0-2 .9-2 2v4c0 1.1.9 2 2 2s2-.9 2-2v-4c0-1.1-.9-2-2-2zm0 10c-1.1 0-2 .9-2 2v30c0 1.1.9 2 2 2s2-.9 2-2V20c0-1.1-.9-2-2-2zm-8 10c-1.1 0-2 .9-2 2v20c0 1.1.9 2 2 2s2-.9 2-2V30c0-1.1-.9-2-2-2zm16 0c-1.1 0-2 .9-2 2v20c0 1.1.9 2 2 2s2-.9 2-2V30c0-1.1-.9-2-2-2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-2xl text-brown mb-3">Aromas Exclusivos</h3>
+                    <div class="gold-accent w-16 mx-auto mb-4"></div>
+                    <p class="text-brown/80">Fragrâncias únicas desenvolvidas para criar experiências sensoriais memoráveis e transformadoras.</p>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card bg-beige/50 p-8 rounded-lg text-center">
+                    <div class="w-20 h-20 mx-auto mb-6 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" class="w-16 h-16 text-gold">
+                            <path fill="#D4AF37" d="M32 4C18.7 4 8 14.7 8 28c0 9.9 6 18.4 14.5 22.1-.3 1.4-.5 2.9-.5 4.4 0 1.4 1.1 2.5 2.5 2.5h15c1.4 0 2.5-1.1 2.5-2.5 0-1.5-.2-3-.5-4.4C49.9 46.4 56 37.9 56 28 56 14.7 45.3 4 32 4zm0 4c11 0 20 9 20 20 0 11-9 20-20 20s-20-9-20-20c0-11 9-20 20-20zm-7.5 44h15c.1 0 .2 0 .2.1-.7 1.2-1.6 2.3-2.7 3.2-2.9 2.4-6.7 3.7-10.5 3.7-3.8 0-7.6-1.3-10.5-3.7-1.1-.9-2-2-2.7-3.2 0-.1.1-.1.2-.1z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-2xl text-brown mb-3">Longa Duração</h3>
+                    <div class="gold-accent w-16 mx-auto mb-4"></div>
+                    <p class="text-brown/80">Nossas velas são formuladas para queimar lentamente, proporcionando até 50 horas de aroma contínuo.</p>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card bg-beige/50 p-8 rounded-lg text-center">
+                    <div class="w-20 h-20 mx-auto mb-6 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" class="w-16 h-16 text-gold">
+                            <path fill="#D4AF37" d="M32 4c-5.5 0-10 4.5-10 10 0 2.9 1.2 5.5 3.2 7.3-7.4 2.5-12.8 9.4-12.8 17.6 0 10.3 8.4 18.7 18.7 18.7h1.8c10.3 0 18.7-8.4 18.7-18.7 0-8.2-5.3-15.1-12.8-17.6 2-1.9 3.2-4.5 3.2-7.3 0-5.5-4.5-10-10-10zm0 4c3.3 0 6 2.7 6 6s-2.7 6-6 6-6-2.7-6-6 2.7-6 6-6zm-0.9 16h1.8c8.1 0 14.7 6.6 14.7 14.7S41 53.4 32.9 53.4h-1.8c-8.1 0-14.7-6.6-14.7-14.7S23.9 24 31.1 24z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-2xl text-brown mb-3">Personalização</h3>
+                    <div class="gold-accent w-16 mx-auto mb-4"></div>
+                    <p class="text-brown/80">Criamos velas personalizadas para presentes especiais, eventos ou para combinar com sua decoração.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="bg-purple-800 text-white py-8 px-4 sm:px-6 lg:px-8 mt-16 relative z-10">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Logo and copyright -->
-                <div class="col-span-1 md:col-span-1">
-                    <div class="flex items-center mb-4">
-                        <svg class="h-8 w-8 text-white" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="40" height="40" rx="8" fill="white" fill-opacity="0.2"/>
-                            <path d="M12 20C12 15.5817 15.5817 12 20 12C24.4183 12 28 15.5817 28 20V26C28 27.1046 27.1046 28 26 28H14C12.8954 28 12 27.1046 12 26V20Z" fill="#4ADE80"/>
-                            <path d="M18 22C18 20.8954 18.8954 20 20 20C21.1046 20 22 20.8954 22 22V28H18V22Z" fill="white"/>
+    <footer class="py-10 px-4 md:px-8 bg-terracotta text-cream">
+        <div class="container mx-auto max-w-5xl">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h2 class="font-serif text-3xl mb-2">Nana Velas Aromáticas</h2>
+                    <p class="font-serif italic">Transforme sua casa em um refúgio com aromas naturais.</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="https://www.instagram.com/nana.velasaromaticas/" target="_blank" class="flex items-center space-x-2 text-cream hover:text-gold transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                         </svg>
-                        <span class="ml-2 text-lg font-bold font-['Montserrat']">RespondeJá</span>
-                    </div>
-                    <p class="text-sm text-purple-200">© RespondeJá – Soluções inteligentes em automação de atendimento e vendas.</p>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="https://wa.me/5511999999999" target="_blank" class="flex items-center space-x-2 text-cream hover:text-gold transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                        </svg>
+                        <span>WhatsApp</span>
+                    </a>
                 </div>
-
-                <!-- Contact info -->
-                <div class="col-span-1">
-                    <h3 class="text-lg font-semibold mb-4 font-['Montserrat']">Contato</h3>
-                    <ul class="space-y-2">
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M7.707 2.293a1 1 0 010 1.414L5.414 6H9a7 7 0 017 7v2a1 1 0 11-2 0v-2a5 5 0 00-5-5H5.414l2.293 2.293a1 1 0 11-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                            </svg>
-                            <a href="mailto:respondeja.startup@gmail.com" class="text-purple-200 hover:text-white transition-colors">respondeja.startup@gmail.com</a>
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
-                            </svg>
-                            <span class="text-purple-200">Içara, SC - Brasil</span>
-                        </li>
-                    </ul>
-                </div>
+            </div>
+            
+            <div class="gold-accent w-full my-8"></div>
+            
+            <div class="text-center text-cream/80 text-sm">
+                <p>&copy; 2023 Nana Velas Aromáticas. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9436821e766c6dc7',t:'MTc0Nzg1NjAzNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+
+    <script>
+        // Form submission handler
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const contact = document.getElementById('contact').value;
+            const preference = document.getElementById('preference').value;
+            const line = document.getElementById('line').value;
+            
+            // In a real implementation, this would send data to a server
+            // For this demo, we'll just show an alert
+            alert(`Obrigado, ${name}! Recebemos seu formulário e entraremos em contato em breve através do ${contact} com informações sobre nossas velas ${line}.`);
+            
+            // Reset form
+            this.reset();
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9636701302d8f1d2',t:'MTc1MzIyNDAwNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
